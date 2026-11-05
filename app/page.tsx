@@ -1083,7 +1083,7 @@ const Hero = () => {
           <div className='relative flex items-center justify-center gap-3 my-1.5'>
             <span className='w-8 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#D4AF37]' />
             <Lotus className='w-6 sm:w-8' stroke={GOLD} />
-            <span className={`text-base sm:text-lg italic text-[#8A672F] ${D}`}>with</span>
+            <span className={`text-3xl sm:text-4xl font-semibold leading-none text-[#6E0B18] ${C}`}>&</span>
             <Lotus className='w-6 sm:w-8 rotate-180' stroke={GOLD} />
             <span className='w-8 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#D4AF37]' />
           </div>
@@ -1176,7 +1176,7 @@ const Envelope = () => {
                   <p className={`relative text-base italic text-[#5B3A2A] mt-0.5 ${D}`}>Together with their families,</p>
                   <div className='relative my-2 space-y-0.5'>
                     <h3 className={`text-3xl sm:text-4xl font-bold leading-tight text-[#6E0B18] ${SCRIPT}`}>{p.couple.groom}</h3>
-                    <p className={`text-lg italic text-[#8A672F] ${D}`}>with</p>
+                    <p className={`text-3xl sm:text-4xl font-semibold leading-none text-[#6E0B18] ${C}`}>&</p>
                     <h3 className={`text-3xl sm:text-4xl font-bold leading-tight text-[#6E0B18] ${SCRIPT}`}>{p.couple.bride}</h3>
                   </div>
                   <Divider className='relative my-2' />
