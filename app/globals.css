@@ -1,26 +1,161 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Noto+Serif+Tamil:wght@500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-gold: #b8945a;
+  --color-gold-dark: #8a672f;
+  --color-gold-light: #f4e4bc;
+  --color-plum: #63345d;
+  --color-warmbrown: #604a3a;
+  --color-champagne-50: #fffdf9;
+  --color-champagne-100: #fff7ec;
+  --color-champagne-warm: #f8ebdd;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', serif, Georgia;
+  background-color: var(--color-champagne-100);
+  color: var(--color-warmbrown);
+  overflow-x: hidden;
+}
+
+/* Custom Typography Utility Mappings */
+.font-pinyon {
+  font-family: 'Pinyon Script', cursive !important;
+}
+
+.font-heading {
+  font-family: 'Cinzel', serif !important;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif !important;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-tamil {
+  font-family: 'Noto Serif Tamil', serif !important;
+}
+
+/* Custom Colors & Backgrounds */
+.bg-champagne-50 {
+  background-color: #fffdf9;
+}
+.bg-champagne-100 {
+  background-color: #fff7ec;
+}
+.bg-champagne-warm {
+  background-color: #f8ebdd;
+}
+.bg-gold {
+  background-color: #b8945a;
+}
+.bg-gold-dark {
+  background-color: #8a672f;
+}
+
+.text-gold {
+  color: #b8945a;
+}
+.text-gold-dark {
+  color: #8a672f;
+}
+.text-plum {
+  color: #63345d;
+}
+.text-warmbrown {
+  color: #604a3a;
+}
+
+.border-gold {
+  border-color: #b8945a;
+}
+.border-gold-dark {
+  border-color: #8a672f;
+}
+
+/* 3D Shadows & Elevations */
+.shadow-card-elevation {
+  box-shadow:
+    0 10px 30px -5px rgba(184, 148, 90, 0.18),
+    0 4px 12px -2px rgba(96, 74, 58, 0.08);
+}
+
+.shadow-seal-elevation {
+  box-shadow:
+    0 8px 24px -4px rgba(184, 148, 90, 0.35),
+    0 2px 8px -1px rgba(96, 74, 58, 0.12);
+}
+
+.shadow-envelope-3d {
+  box-shadow:
+    0 20px 45px -10px rgba(96, 74, 58, 0.22),
+    0 6px 16px -4px rgba(184, 148, 90, 0.18);
+}
+
+.shadow-luxury {
+  box-shadow: 0 12px 32px -4px rgba(184, 148, 90, 0.3);
+}
+
+/* Keyframes & Animations */
+@keyframes pulseSubtle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(25deg);
+  }
+}
+
+.gold-shimmer-sweep {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(244, 228, 188, 0.45) 50%,
+    transparent 100%
+  );
+  animation: shimmerSweep 3.5s infinite;
+}
+
+@import "tailwindcss";
+
+.font-script {
+  font-family: var(--font-alex-brush), cursive !important;
+}
+
+.font-head {
+  font-family: var(--font-playfair), serif !important;
+  letter-spacing: 0.04em;
+}
+
+.font-soft-roman {
+  font-family: var(--font-marcellus), serif !important;
+  letter-spacing: 0.08em;
+}
+
+.font-garamond {
+  font-family: var(--font-cormorant), serif !important;
+}
+
+.font-tamil {
+  font-family: var(--font-noto-tamil), serif !important;
 }
